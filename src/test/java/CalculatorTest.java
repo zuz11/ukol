@@ -3,7 +3,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
-import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.net.URL;
 
@@ -28,33 +27,33 @@ public class CalculatorTest {
 
 
     @Test
-    public void testCalculatorMain1() throws FileNotFoundException {
-        URL url=getClass().getResource("test_file1");
+    public void testCalculatorMain1() {
+        URL url = getClass().getResource("test_file1");
 
-        String[] args= new String[1];
-        args[0]=url.getPath();
+        String[] args = new String[1];
+        args[0] = url.getPath();
 
         Calculator.main(args);
         assertEquals("1", outContent.toString().replaceAll("(\\r|\\n)", ""));
     }
 
     @Test
-    public void testCalculatorMain2() throws FileNotFoundException {
-        URL url=getClass().getResource("test_file2");
+    public void testCalculatorMain2() {
+        URL url = getClass().getResource("test_file2");
 
-        String[] args= new String[1];
-        args[0]=url.getPath();
+        String[] args = new String[1];
+        args[0] = url.getPath();
 
         Calculator.main(args);
         assertEquals("18", outContent.toString().replaceAll("(\\r|\\n)", ""));
     }
 
     @Test
-    public void testCalculatorMain3() throws FileNotFoundException {
-        URL url=getClass().getResource("test_file3");
+    public void testCalculatorMain3() {
+        URL url = getClass().getResource("test_file3");
 
-        String[] args= new String[1];
-        args[0]=url.getPath();
+        String[] args = new String[1];
+        args[0] = url.getPath();
 
         Calculator.main(args);
         assertEquals("45", outContent.toString().replaceAll("(\\r|\\n)", ""));
